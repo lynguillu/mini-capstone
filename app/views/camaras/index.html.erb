@@ -1,0 +1,21 @@
+<a href="/camaras/new">Create a new camara</a>
+<h1>Camaras</h1>
+
+<div class="row">
+
+<% @camaras.each do |camara| %>
+  <div class="col-md-4">
+    <div class="well">
+      <h3><a href="/camaras/<%= camara.id %>">Name: <%= camara.name %></a></h3>
+      <img src="<%=camara.image%>" class="cam-img">
+      <h3>Model: <%= camara.model %></h3>
+      <h3>Mark: <%= camara.mark %></h3>
+      <h3>Price: <%= camara.price %></h3>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
+
+

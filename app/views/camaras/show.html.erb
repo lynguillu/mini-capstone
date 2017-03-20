@@ -1,0 +1,16 @@
+<h1>Camara Information</h1>
+
+  <h3><%= @camara.name %></h3>
+  <h3>Model: <%= @camara.model %></h3>
+  <h3>Mark: <%= @camara.mark %></h3>
+  <h3>Price: <%= @camara.price %></h3>
+  <%= form_tag "/camaras/#{@camara.id}", method: :delete do %>
+  <% end %>
+  <div>
+  <%= link_to "Delete Camara", "/camaras/#{@camara.id}", method: :delete %>
+  </div>
+  <a href="/camaras">Back to all Camaras</a>
+
+
+
+
