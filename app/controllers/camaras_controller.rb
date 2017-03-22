@@ -39,7 +39,7 @@ class CamarasController < ApplicationController
     camara.model = params[:model]
     camara.mark = params[:mark]
     camara.price = params[:price]
-    carmara.save
+    camara.save
     render "update.html.erb"
 
   end

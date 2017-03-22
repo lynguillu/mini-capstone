@@ -1,17 +1,18 @@
 <h1>Edit Camara</h1>
-<%= form_tag "/camaras/#{@camara.id}", method: :post do %>
+<%= form_tag "/camaras/#{@camara.id}", method: :patch do %>
 
 <div class="form-group">
-  Name: <input type="text" class="form-control" name="form_name">
+  Name: <input type="text" class="form-control" value="<%= @camara.name %>" 
+  name="name">
 </div>
 <div class="form-group">
-  Model: <input type="text" class="form-control" name="form_model">
+  Model: <input type="text" class="form-control" value="<%= @camara.model%>" name="model">
 </div>
 <div class="form-group">
-  Mark: <input type="text" class="form-control" name="form_mark">
+  Mark: <input type="text" class="form-control" value="<%= @camara.mark %>" name="mark">
 </div>
 <div class="form-group">
-  Price: <input type="text" class="form-control" name="form_price">
+  Price: <input type="text" class="form-control" value="<%= @camara.price %>"name="price">
 </div>
-<input type="submit" class="btn btn-default" value="create camara">
+<input type="submit" class="btn btn-default" value="update camara">
 <% end %>

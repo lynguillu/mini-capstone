@@ -4,12 +4,15 @@
   <h3>Model: <%= @camara.model %></h3>
   <h3>Mark: <%= @camara.mark %></h3>
   <h3>Price: <%= @camara.price %></h3>
+  <img src="<%=@camara.image%>">
   <%= form_tag "/camaras/#{@camara.id}", method: :delete do %>
   <% end %>
   <div>
   <%= link_to "Delete Camara", "/camaras/#{@camara.id}", method: :delete %>
   </div>
   <a href="/camaras">Back to all Camaras</a>
+  <a href="/camaras/<%= @camara.id %>/edit">Update Camara</a>
+
 
 
 
