@@ -17,7 +17,7 @@ class CamarasController < ApplicationController
       price: params[:form_price]
     )
     camara.save
-    render "create.html.erb"
+    redirect_to "/camaras"
   end
   
   def show

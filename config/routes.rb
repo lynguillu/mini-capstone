@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get "/camaras/:id/edit" => "camaras#edit"
   patch "/camaras/:id" => "camaras#update"
   delete "/camaras/:id" => "camaras#destroy"
+
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
 end
