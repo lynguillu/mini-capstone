@@ -10,5 +10,10 @@ class UsersController < ApplicationController
       password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
+    if user.save
+      redirect_to "/login"
+    else
+      redirect_to "/signup"
+    end
   end
 end
