@@ -7,12 +7,16 @@
   <img src="<%=@camara.image%>">
   <%= form_tag "/camaras/#{@camara.id}", method: :delete do %>
   <% end %>
+  <div class="form-group">
+  Buy: <input type="text" class="form-control" name="quantity">
+  </div>
   <div>
   <%= link_to "Delete Camara", "/camaras/#{@camara.id}", method: :delete %>
   </div>
   <a href="/camaras">Back to all Camaras</a>
+  <div>
   <a href="/camaras/<%= @camara.id %>/edit">Update Camara</a>
-
+  </div>
 
 
 
