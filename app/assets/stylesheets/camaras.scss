@@ -2,7 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body { padding-top: 70px; }
+
+.navbar-brand { 
+   font-family: 'Cinzel Decorative', cursive;
+   font-family: 'Baloo Bhaina', cursive;
+   font-size: 3em,
+  
+   }
 
 h1 {
   color: black;
@@ -16,3 +24,4 @@ h1 {
   min-height: 420px;
   background-color: rgba(255,255,255,0.3);
 }
+
