@@ -5,6 +5,12 @@ class CamarasController < ApplicationController
     render "index.html.erb"
   end
 
+  def search
+    search_params = params[:search]
+    @camaras = Camera.where('name ILIKE ?', "%#{search_params}%")
+    render "index.html.erb"
+  end
+
   def new
     render "new.html.erb"
   end
@@ -42,14 +48,15 @@ class CamarasController < ApplicationController
     camara.save
     render "update.html.erb"
 
-  end
+  end 
 
 
   def destroy
     camara_id = params[:id]
     @camara = Camera.find_by(id: camara_id)
     @camara.destroy
-    render "destroy.html.erb"
-    
+    render "destroy.html.erb"    
   end
+
+ 
 end

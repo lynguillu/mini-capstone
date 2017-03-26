@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/camaras/:id/edit" => "camaras#edit"
   patch "/camaras/:id" => "camaras#update"
   delete "/camaras/:id" => "camaras#destroy"
+  post "/camaras_search" => "camaras#search"
 
   get "/signup" => "users#new"
   post "/users" => "users#create"
@@ -18,5 +19,5 @@ Rails.application.routes.draw do
   get "/logout" => "sessions#destroy"
 
   get "/orders/:id" => "orders#show"
-  post "/order" => "orders#create"
+  post "/orders" => "orders#create"
 end

@@ -1,0 +1,2 @@
+class CategoryCamera < ApplicationRecord
+end
