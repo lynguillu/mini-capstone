@@ -11,4 +11,20 @@ class Camera < ApplicationRecord
       return "Everyday Value"
     end
   end
+
+  def tax
+    return price.to_f * 0.09
+  end
+
+  def total
+    return price.to_f + tax 
+  end
+
+  def discounted?
+    if price.to_f < 350
+      return true
+    else
+      return false
+    end
+  end
 end

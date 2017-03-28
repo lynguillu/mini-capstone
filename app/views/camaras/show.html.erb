@@ -1,9 +1,19 @@
 <h1>Camara Information</h1>
 
   <h3><%= @camara.name %></h3>
+  <% if @camara.discounted? %>
+  <p>Discounted item!</p>
+  <p class="discount-item">Price: <%= number_to_currency(@camara.price) %></p>
+  <% else %>
+  <p>Everyday Value</p>
+  <% end %>
+
   <h3>Model: <%= @camara.model %></h3>
   <h3>Mark: <%= @camara.mark %></h3>
-  <h3>Price: <%= @camara.price %></h3>
+  
+  <h3>Tax: <%= number_to_currency(@camara.tax) %></h3>
+  <h3>Total: <%= number_to_currency(@camara.total) %></h3
+
   <p><%= @camara.sale_message %></p>
 
   <img src="<%= @camara.image%>">
